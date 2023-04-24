@@ -1,0 +1,276 @@
+:root {
+    --twitterBlue: #1DA1F2;
+    --twitterBlueDark: #0a69a4;
+    --blackColor: black;
+    --whiteColor: white;
+    --greyColor: rgb(94, 94, 94);
+    --lightGreyColor: rgb(190, 190, 190);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: Helvetica, sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+}
+button {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+}
+
+/* information section */
+
+.information {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+ 
+}
+.information .navigation{
+    display: grid;
+    gap: 2em;
+    background-color: red;
+}
+
+.information .top-info{
+    display: grid;
+    gap: 1em;
+}
+
+.information header a {
+    color: var(--twitterBlue);
+    font-size: 25px;
+    margin-left: 0.5em;
+}
+
+.information nav {
+    display: grid;
+    gap: 1em;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: grid;
+    gap: 0.4em;
+}
+nav li{
+    font-size: 17px;
+    border-radius: 5em;
+    margin: 0 auto 0 0;
+    
+}
+
+nav li a{
+    color: var(--blackColor);
+    text-decoration: none;
+    display: flex;
+    gap: 1em;
+    padding: 0.7em 1.2em;
+}
+
+
+
+nav li:hover{
+    background-color: var(--lightGreyColor);
+    transition: 0.5s;
+    width: auto;
+}
+
+
+
+nav button {
+    background-color: var(--twitterBlue);
+    border: none;
+    padding: 1.2em;
+    border-radius: 5em;
+    width: 180px;
+    font-weight: bold;
+    color: var(--whiteColor);
+}
+
+nav button:hover {
+    background-color: var(--twitterBlueDark);
+    
+}
+
+.navigation .profile > button {
+    display: flex;
+    gap: 1em;
+    border-radius: 5em;
+    border: none;
+    padding: 1em;
+    align-items: center;
+    background-color: var(--whiteColor);
+}
+.navigation .profile > button:hover {
+    background-color: var(--lightGreyColor);
+    transition: 0.5s;
+    
+}
+
+.profile .image {
+    width: 30px;
+    height: 30px;
+    border-radius: 5em;
+    overflow: hidden;
+}
+
+.profile.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.profile .profile-details {
+    text-align: left;
+    font-size: 13px;
+}
+
+.profile-details p:first-of-type {
+    font-weight: bold;
+}
+
+.profile p:last-of-type {
+    color: var(--greyColor);
+}
+
+/* Tweets Section */
+.tweets {
+    height: 100vh;
+    background-color: red;
+   overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.post-tweet {
+    border-top: 1px solid var(--blackColor);
+    border-bottom: 1px solid var(--blackColor);
+    padding: 0.2em 1em;
+}
+
+.post-tweet .post {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+.post .image {
+    width: 40px;
+    height: 40px;
+    border-radius: 5em;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.post input {
+    outline: none;
+    border: none;
+    font-size: 1.3em;
+    
+}
+
+
+.post-tweet .post-attachement {
+    display: flex;
+    gap: 5em;
+    align-items: center;
+}
+.post-attachement .post-icons {
+    padding-left: 2.5em;
+}
+.post-attachement span {
+    margin: 0 0.2em;
+    font-size: 20px;
+}
+
+.post-attachement button {
+    background-color: var(--twitterBlue);
+    color: var(--whiteColor);
+    font-weight: bold;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5em;
+}
+
+/* single tweet  */
+
+.single-tweet {
+    border-bottom: 1px solid var(--blackColor);
+    padding: 0.5em 1em;
+}
+
+.tweet-profile {
+    display: flex;
+    gap: 5em;
+    margin-bottom: 0.5em;
+}
+.profile-info {
+    display: flex;
+    gap: 1em;
+}
+.tweet-profile .image {
+    width: 40px;
+    height: 40px;
+    border-radius: 5em;
+    overflow: hidden;
+}
+
+.tweet-profile.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.profile-handle-info .handle-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.handle-info span {
+    font-size: 20px;
+
+}
+
+.handle-info p:first-of-type {
+    font-weight: bold;
+}
+.tweet-profile p:last-child {
+    display: block;
+}
+
+
+.tweet-icons {
+    display: flex;
+    gap: 2.6em;
+    justify-content: center;
+    
+}
+
+.tweet-icons, p {
+    font-size: 12px;
+}
+.comment, .retweet, .likes, .insight, .share {
+    display: flex;
+    gap: 1em;
+}

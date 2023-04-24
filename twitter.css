@@ -1,0 +1,466 @@
+:root {
+    --twitterBlue: #1DA1F2;
+    --twitterBlueDark: #0a69a4;
+    --blackColor: black;
+    --whiteColor: white;
+    --greyColor: rgb(94, 94, 94);
+    --lightGreyColor: rgb(190, 190, 190);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: Helvetica, sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+}
+button {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+/* information section */
+
+.information {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.information .navigation{
+    display: grid;
+    gap: 2em;
+}
+
+.information .top-info{
+    display: grid;
+    gap: 1em;
+}
+
+.information header a {
+    color: var(--twitterBlue);
+    font-size: 25px;
+    margin-left: 0.5em;
+}
+
+.information nav {
+    display: grid;
+    gap: 1em;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: grid;
+    gap: 0.4em;
+}
+nav li{
+    font-size: 17px;
+    border-radius: 5em;
+    margin: 0 auto 0 0;
+    
+}
+
+nav li a{
+    color: var(--blackColor);
+    text-decoration: none;
+    display: flex;
+    gap: 1em;
+    padding: 0.7em 1.2em;
+}
+
+
+
+nav li:hover{
+    background-color: var(--lightGreyColor);
+    transition: 0.5s;
+    width: auto;
+}
+
+
+
+nav button {
+    background-color: var(--twitterBlue);
+    border: none;
+    padding: 1.2em;
+    border-radius: 5em;
+    width: 180px;
+    font-weight: bold;
+    color: var(--whiteColor);
+}
+
+nav button:hover {
+    background-color: var(--twitterBlueDark);
+    
+}
+
+.navigation .profile > button {
+    display: flex;
+    gap: 1em;
+    border-radius: 5em;
+    border: none;
+    padding: 1em;
+    align-items: center;
+    background-color: var(--whiteColor);
+}
+.navigation .profile > button:hover {
+    background-color: var(--lightGreyColor);
+    transition: 0.5s;
+    
+}
+
+.profile .image {
+    width: 30px;
+    height: 30px;
+    border-radius: 5em;
+    overflow: hidden;
+}
+
+.profile.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.profile .profile-details {
+    text-align: left;
+    font-size: 13px;
+}
+
+.profile-details p:first-of-type {
+    font-weight: bold;
+}
+
+.profile p:last-of-type {
+    color: var(--greyColor);
+}
+
+/* Tweets Section */
+.tweets {
+    width: 70%;
+    height: 100vh;
+   overflow-y: scroll;
+    scroll-behavior: smooth;
+    border-right: 1px solid var(--lightGreyColor);
+    margin-right: 1em;
+}
+
+.tweets::-webkit-scrollbar {
+    display: none;
+}
+
+/* .nav-links {
+
+} */
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links ul li {
+    width: 50%;
+    text-align: center;
+    padding: 1em;
+    background-color: var(--lightGreyColor);
+}
+.nav-links li a {
+    text-decoration: none;
+    
+}
+
+
+/* .nav-links ul li:active a {
+
+} */
+
+
+ 
+
+.post-tweet {
+    border-top: 1px solid var(--lightGreyColor);
+    border-bottom: 1px solid var(--lightGreyColor);
+    padding: 0.2em 1em;
+}
+
+.post-tweet .post {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+.post .image {
+    width: 40px;
+    height: 40px;
+    border-radius: 5em;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.post input {
+    outline: none;
+    border: none;
+    font-size: 1.3em;
+    
+}
+
+
+.post-tweet .post-attachement {
+    display: flex;
+    gap: 5em;
+    align-items: center;
+}
+.post-attachement .post-icons {
+    padding-left: 2.5em;
+}
+.post-attachement span {
+    margin: 0 0.2em;
+    font-size: 20px;
+}
+
+.post-attachement button {
+    background-color: var(--twitterBlue);
+    color: var(--whiteColor);
+    font-weight: bold;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5em;
+}
+
+/* single tweet  */
+
+.single-tweet {
+    border-bottom: 1px solid var(--lightGreyColor);
+    padding: 0.5em 1em;
+}
+
+.tweet-profile {
+    display: flex;
+    justify-content: space-between;
+    gap: 5em;
+    margin-bottom: 0.5em;
+}
+.profile-info {
+    display: flex;
+    gap: 1em;
+}
+.tweet-profile .image {
+    width: 40px;
+    height: 40px;
+    border-radius: 5em;
+    overflow: hidden;
+}
+
+.tweet-profile.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.profile-handle-info .handle-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.handle-info span {
+    font-size: 20px;
+
+}
+
+.handle-info p:first-of-type {
+    font-weight: bold;
+}
+.tweet-profile p:last-child {
+    display: block;
+}
+
+
+.tweet-icons {
+    display: flex;
+    gap: 2.6em;
+    /* justify-content: center; */
+    margin-left: 4.6em;
+    
+}
+
+.tweet-icons, p {
+    font-size: 15px;
+}
+.comment, .retweet, .likes, .insight, .share {
+    display: flex;
+    gap: 1em;
+}
+
+
+
+
+
+/*Trends Section Styling Start*/
+.trends {
+    padding-right: 3em;
+    padding-left: .5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 45%;
+    /* overflow-y: scroll;
+    scroll-behavior: smooth; */
+}
+
+/* .trends .search-container {
+    position: fixed;
+    background-color: red;
+    width: 100%;
+
+} */
+
+.trends .search {
+    width: 100%;
+    padding: 0 1em;
+    border-radius: 5em;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: var(--lightGreyColor);
+   margin-top: 1em;
+}
+
+.trends .search i {
+    margin-right: 1em;
+    color: var(--twitterBlue);
+}
+
+.trends .search input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.spaces {
+    width: 100%;
+    height: auto;
+    background-color: var(--lightGreyColor);
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.space-section-title {
+    margin-bottom: 0.2em;
+    padding: 1em .7em 0;
+}
+
+.space-link {
+    padding: 1em 1em;
+}
+.space-link:hover {
+    background-color: red;
+    width: 100%;
+}
+.space-profile img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: .5em;
+}
+
+.spaces .space-info {
+    display: flex;
+    align-items: center;
+}
+
+.spaces .space-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.space-container p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.space-info span {
+    font-size: 15px;
+    padding: 0 .2em;
+}
+.space-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.space-container p{
+    width: 55%;
+}
+.space-listeners {
+    height: 40px;
+    display: flex;
+    border: 1px solid violet;
+    align-items: center;
+    border-radius: 2em;
+    padding: 0 .5em;
+}
+
+.space-container .space-listeners-img {
+    display: flex;
+    
+}
+
+.space-listeners-img img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+/* .space-listeners-img .img-semicircle {
+
+} */
+
+.trends-section {
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    background-color: var(--lightGreyColor);
+    overflow: hidden;
+}
+
+.trends-section h2 {
+    padding: .5em;
+}
+
+.trends-section article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7em 1em;
+}
+
+.trends-section article:hover {
+    background-color: red;
+}
+
+
+
+/*Trends Section Styling End*/
