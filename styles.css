@@ -5,6 +5,8 @@
     --whiteColor: white;
     --greyColor: rgb(94, 94, 94);
     --lightGreyColor: rgb(190, 190, 190);
+    --extraLightGrey: #F5F8FA;
+    --extraLightGreyHover: #f0f0f0;
 }
 
 * {
@@ -29,23 +31,22 @@ button {
 
 .container {
     display: flex;
+    height: 100%;
 }
 
 /* information section */
 
 .information {
-    width: 25%;
+    width: 35%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: green;
  
 }
 .information .navigation{
     display: grid;
     gap: 2em;
-    background-color: red;
 }
 
 .information .top-info{
@@ -88,7 +89,7 @@ nav li a{
 
 
 nav li:hover{
-    background-color: var(--lightGreyColor);
+    background-color: var(--extraLightGreyHover);
     transition: 0.5s;
     width: auto;
 }
@@ -120,7 +121,7 @@ nav button:hover {
     background-color: var(--whiteColor);
 }
 .navigation .profile > button:hover {
-    background-color: var(--lightGreyColor);
+    background-color: var(--extraLightGreyHover);
     transition: 0.5s;
     
 }
@@ -152,15 +153,49 @@ nav button:hover {
 
 /* Tweets Section */
 .tweets {
+    width: 70%;
     height: 100vh;
-    background-color: red;
    overflow-y: scroll;
     scroll-behavior: smooth;
+    border-right: 1px solid var(--lightGreyColor);
+    margin-right: 1em;
 }
 
+.tweets::-webkit-scrollbar {
+    display: none;
+}
+
+/* .nav-links {
+
+} */
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links ul li {
+    width: 50%;
+    text-align: center;
+    padding: 1em;
+    background-color: var(--lightGreyColor);
+}
+.nav-links li a {
+    text-decoration: none;
+    
+}
+
+
+/* .nav-links ul li:active a {
+
+} */
+
+
+ 
+
 .post-tweet {
-    border-top: 1px solid var(--blackColor);
-    border-bottom: 1px solid var(--blackColor);
+    border-top: 1px solid var(--lightGreyColor);
+    border-bottom: 1px solid var(--lightGreyColor);
     padding: 0.2em 1em;
 }
 
@@ -216,12 +251,13 @@ nav button:hover {
 /* single tweet  */
 
 .single-tweet {
-    border-bottom: 1px solid var(--blackColor);
+    border-bottom: 1px solid var(--lightGreyColor);
     padding: 0.5em 1em;
 }
 
 .tweet-profile {
     display: flex;
+    justify-content: space-between;
     gap: 5em;
     margin-bottom: 0.5em;
 }
@@ -263,14 +299,171 @@ nav button:hover {
 .tweet-icons {
     display: flex;
     gap: 2.6em;
-    justify-content: center;
+    /* justify-content: center; */
+    margin-left: 4.6em;
     
 }
 
 .tweet-icons, p {
-    font-size: 12px;
+    font-size: 15px;
 }
 .comment, .retweet, .likes, .insight, .share {
     display: flex;
     gap: 1em;
 }
+
+
+
+
+
+/*Trends Section Styling Start*/
+.trends {
+    padding-right: 3em;
+    padding-left: .5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 45%;
+    /* overflow-y: scroll;
+    scroll-behavior: smooth; */
+}
+
+/* .trends .search-container {
+    position: fixed;
+    background-color: red;
+    width: 100%;
+
+} */
+
+.trends .search {
+    width: 100%;
+    padding: 0 1em;
+    border-radius: 5em;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: var( --extraLightGrey);
+   margin-top: 1em;
+}
+
+.trends .search i {
+    margin-right: 1em;
+    color: var(--twitterBlue);
+}
+
+.trends .search input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.spaces {
+    width: 100%;
+    height: auto;
+    background-color: var( --extraLightGrey);
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.space-section-title {
+    margin-bottom: 0.2em;
+    padding: 1em .7em 0;
+}
+
+.space-link {
+    padding: 1em 1em;
+}
+.space-link:hover {
+    background-color: var(--extraLightGreyHover);
+    width: 100%;
+    cursor: pointer;
+}
+.space-profile img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: .5em;
+}
+
+.spaces .space-info {
+    display: flex;
+    align-items: center;
+}
+
+.spaces .space-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.space-container p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.space-info span {
+    font-size: 15px;
+    padding: 0 .2em;
+}
+.space-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.space-container p{
+    width: 55%;
+}
+.space-listeners {
+    height: 40px;
+    display: flex;
+    border: 1px solid violet;
+    align-items: center;
+    border-radius: 2em;
+    padding: 0 .5em;
+}
+
+.space-container .space-listeners-img {
+    display: flex;
+    
+}
+
+.space-listeners-img img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+/* .space-listeners-img .img-semicircle {
+
+} */
+
+.trends-section {
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    background-color: var( --extraLightGrey);
+    overflow: hidden;
+}
+
+.trends-section h2 {
+    padding: .5em;
+}
+
+.trends-section article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7em 1em;
+}
+
+.trends-section article:hover {
+    background-color: var(--extraLightGreyHover);
+}
+
+
+
+/*Trends Section Styling End*/
